@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">AppControl</string>
+    <string name="television">电视</string>
+    <string name="air_condition">空调</string>
+    <string name="dvd">DVD</string>
+    <string name="stb">机顶盒</string>
+    <string name="settings">设置</string>
+    <string name="numeric_keyboard_up">numeric keyboard down</string>
+    <string name="numeric_keyboard_cancel">numeric keyboard cancel</string>
+    <string name="numeric_keyboard_down">numeric keyboard down</string>
+    <string name="enterDeviceid">请输入要配对的设备号：</string>
+</resources>

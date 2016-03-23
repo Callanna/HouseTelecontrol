@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/appcontrol/src/main/java/com/github/callanna/appcontrol/view/flippableStackView/FlippableStackView.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/appcontrol/src/main/java/com/github/callanna/appcontrol/view/flippableStackView/OrientedViewPager.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/appcontrol/src/main/java/com/github/callanna/appcontrol/view/flippableStackView/StackPageTransformer.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/appcontrol/src/main/java/com/github/callanna/appcontrol/view/flippableStackView/ValueInterpolator.java" charset="GBK" />
+    <file url="PROJECT" charset="UTF-8" />
+  </component>
+</project>

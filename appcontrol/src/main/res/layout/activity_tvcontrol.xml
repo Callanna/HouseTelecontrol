@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:callanna="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:id="@+id/layout_tvmain"
+    android:background="@mipmap/ic_tv_control_bg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+     <RelativeLayout
+         android:orientation="horizontal"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content">
+        <LinearLayout
+            android:id="@+id/layout_switch"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:clickable="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="40dp"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/select_tv_criclebutton_bg"
+            android:layout_width="80dp"
+            android:layout_height="80dp">
+            <ImageView
+                android:background="@mipmap/ic_on"
+                android:layout_width="50dp"
+                android:layout_height="50dp" />
+        </LinearLayout>
+         <LinearLayout
+             android:id="@+id/layout_menu"
+             android:layout_weight="1"
+             android:gravity="center"
+             android:clickable="true"
+             android:layout_marginTop="20dp"
+             android:layout_marginLeft="40dp"
+             android:layout_centerHorizontal="true"
+             android:background="@drawable/select_tv_criclebutton_bg"
+             android:layout_width="80dp"
+             android:layout_height="80dp">
+             <ImageView
+                 android:background="@mipmap/ic_tv_menu"
+                 android:layout_width="30dp"
+                 android:layout_height="30dp" />
+         </LinearLayout>
+         <LinearLayout
+             android:id="@+id/layout_setting"
+             android:layout_weight="1"
+             android:gravity="center"
+             android:clickable="true"
+             android:layout_marginTop="20dp"
+             android:layout_marginRight="40dp"
+             android:layout_alignParentRight="true"
+             android:background="@drawable/select_tv_criclebutton_bg"
+             android:layout_width="80dp"
+             android:layout_height="80dp">
+             <ImageView
+                 android:background="@mipmap/ic_setting"
+                 android:layout_width="30dp"
+                 android:layout_height="30dp" />
+         </LinearLayout>
+     </RelativeLayout>
+
+    <RelativeLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:id="@+id/layout_senlice"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:clickable="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="40dp"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/select_tv_criclebutton_bg"
+            android:layout_width="80dp"
+            android:layout_height="80dp">
+            <ImageView
+                android:background="@mipmap/ic_tv_menu_senlice"
+                android:layout_width="30dp"
+                android:layout_height="30dp" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/layout_keybroad"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="40dp"
+            android:clickable="true"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/select_tv_criclebutton_bg"
+            android:layout_width="80dp"
+            android:layout_height="80dp">
+            <ImageView
+                android:background="@mipmap/ic_tv_menu_keybroad"
+                android:layout_width="30dp"
+                android:layout_height="30dp" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/layout_back"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:clickable="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="40dp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/select_tv_criclebutton_bg"
+            android:layout_width="80dp"
+            android:layout_height="80dp">
+            <ImageView
+                android:background="@mipmap/ic_tv_menu_back"
+                android:layout_width="30dp"
+                android:layout_height="30dp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_marginLeft="40dp"
+            android:layout_alignParentLeft="true"
+            android:gravity="center_horizontal"
+            android:background="@drawable/select_oval_rect_button_bg"
+            android:layout_width="50dp"
+            android:layout_height="160dp">
+            <Button
+                android:id="@+id/program_add"
+                android:layout_weight="1"
+                android:background="@mipmap/ic_project_add"
+                android:layout_marginTop="20dp"
+                android:layout_width="30dp"
+                android:layout_height="20dp" />
+            <TextView
+                android:text="频道"
+                android:textSize="22sp"
+                android:layout_weight="1"
+                android:layout_marginTop="30dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <Button
+                android:id="@+id/program_down"
+                android:background="@mipmap/ic_project_down"
+                android:layout_weight="1"
+                android:layout_marginBottom="20dp"
+                android:layout_width="30dp"
+                android:layout_height="20dp" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_marginRight="40dp"
+            android:layout_alignParentRight="true"
+            android:gravity="center_horizontal"
+            android:background="@drawable/select_oval_rect_button_bg"
+            android:layout_width="50dp"
+            android:layout_height="160dp">
+            <Button
+                android:id="@+id/voice_add"
+                android:layout_weight="1"
+                android:background="@mipmap/ic_project_add"
+                android:layout_marginTop="20dp"
+                android:layout_width="30dp"
+                android:layout_height="20dp" />
+            <TextView
+                android:text="音量"
+                android:textSize="22sp"
+                android:layout_weight="1"
+                android:layout_marginTop="30dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <Button
+                android:id="@+id/voice_down"
+                android:background="@mipmap/ic_project_down"
+                android:layout_weight="1"
+                android:layout_marginBottom="20dp"
+                android:layout_width="30dp"
+                android:layout_height="20dp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="260dp"
+        android:layout_gravity="top"
+        android:layout_marginTop="-25dp">
+        <ImageView
+            android:layout_width="@dimen/width_telerunfargment"
+            android:layout_height="@dimen/hidth_telerunfargment"
+            android:layout_centerInParent="true"
+            android:background="@mipmap/ic_main_one"
+            android:rotation="45" />
+
+        <RelativeLayout
+            android:layout_width="@dimen/layout_relative_width"
+            android:layout_height="@dimen/layout_relative_hidth"
+            android:layout_centerInParent="true"
+            android:rotation="45">
+
+            <ImageButton
+                android:id="@+id/imageButton_top"
+                android:layout_width="@dimen/layout_imagebutton_width"
+                android:layout_height="@dimen/layout_imagebutton_hidth"
+                android:background="@drawable/selector_top_telerunfargment"
+                android:src="@drawable/selector_top_src_telerun" />
+
+            <ImageButton
+                android:id="@+id/imageButton_right"
+                android:layout_width="@dimen/layout_imagebutton_width"
+                android:layout_height="@dimen/layout_imagebutton_hidth"
+                android:layout_above="@+id/imageButton_left"
+                android:layout_toEndOf="@+id/imageButton_top"
+                android:layout_toRightOf="@+id/imageButton_top"
+                android:rotation="-90"
+                android:background="@drawable/selector_back_button"
+                android:src="@drawable/selector_src_button" />
+
+            <ImageButton
+                android:id="@+id/imageButton_left"
+                android:layout_width="@dimen/layout_imagebutton_widthl"
+                android:layout_height="@dimen/layout_imagebutton_hidthl"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:rotation="90"
+                android:background="@drawable/selector_back_button"
+                android:src="@drawable/selector_src_button" />
+
+            <ImageButton
+                android:id="@+id/imageButton_button"
+                android:layout_width="@dimen/layout_imagebutton_widthl"
+                android:layout_height="@dimen/layout_imagebutton_hidthl"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/imageButton_right"
+                android:background="@drawable/selector_back_button"
+                android:src="@drawable/selector_src_button" />
+
+            <Button
+                android:id="@+id/imageButton_main"
+                android:layout_width="@dimen/imagebuton_width"
+                android:layout_height="@dimen/imagebuton_hidth"
+                android:layout_marginLeft="@dimen/layout_marginleft"
+                android:layout_marginTop="@dimen/layout_marginttop"
+                android:background="@drawable/selector_back_telerunfargment"
+                android:rotation="-45"
+                android:text="OK"
+                android:textSize="22sp"
+                />
+        </RelativeLayout>
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/layout_musicshow"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@mipmap/music_blurbg">
+
+        <LinearLayout
+            android:id="@+id/layout_musicinfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_song_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Retrograde"
+                android:textColor="@color/yellow"
+                android:textSize="27sp" />
+
+            <TextView
+                android:id="@+id/tv_singer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="James Blake"
+                android:textSize="23sp" />
+        </LinearLayout>
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/layout_bottom"
+            android:layout_below="@+id/layout_musicinfo"
+            android:layout_weight="1" />
+
+        <LinearLayout
+            android:id="@+id/layout_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="10dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:id="@+id/layout_btn_control"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/button_blue_circle_bg">
+
+                <Button
+                    android:id="@+id/btn_control"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_centerInParent="true"
+                    android:background="@mipmap/music_btn_play" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_time_progress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="00:00"
+                android:textSize="20sp" />
+
+            <com.github.callanna.housetelecontrol.view.LrcSeekBar
+                android:id="@+id/seekbar"
+                android:layout_width="600dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:layout_weight="10"
+                android:focusable="false"
+                android:gravity="center"
+                android:maxHeight="7dp"
+                android:minHeight="7dp" />
+
+            <TextView
+                android:id="@+id/tv_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="00:00"
+                android:textSize="20sp" />
+
+            <RelativeLayout
+                android:id="@+id/layout_btn_mode"
+                android:layout_width="50dp"
+                android:layout_height="50dp">
+
+                <Button
+                    android:id="@+id/btn_mode"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_centerInParent="true"
+                    android:background="@mipmap/ic_music_order_mode" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/layout_btn_vocie"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/button_blue_circle_bg">
+
+                <Button
+                    android:id="@+id/btn_vocie"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_centerInParent="true"
+                    android:background="@mipmap/music_speaker" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_music_voice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/layout_bottom"
+            android:layout_alignRight="@+id/layout_bottom"
+            android:layout_margin="20dp"
+            android:background="@mipmap/movie_voice_bg"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingBottom="30dp"
+            android:visibility="gone">
+
+            <com.github.callanna.metarialframe.view.VerticalSeekBar
+                android:id="@+id/seekbar_voice"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="8" />
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="wrap_content"
+                android:layout_height="3dp"
+                android:layout_marginBottom="20dp"
+                android:background="@mipmap/movie_voice_line_bg" />
+
+            <ImageButton
+                android:id="@+id/no_sound"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@mipmap/movie_voice_silence" />
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

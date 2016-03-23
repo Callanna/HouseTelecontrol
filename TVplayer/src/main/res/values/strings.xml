@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">HouseTelecontrol</string>
+    <string name="loadvideotext">加载中，请稍候...</string>
+    <string name="button_ok">确定</string>
+    <string name="duration_tag">影片时长:</string>
+    <string name="net_3g">您正在使用3G/2G网络!</string>
+    <string name="net_outage_tip">网络中断，请检查网络</string>
+    <string name="exit_player_text">正在退出播放...</string>
+    <string name="play_comper">播放完成</string>
+    <string name="tips">提示</string>
+    <string name="playretry">播放出错了，是否重试?</string>
+    <string name="playretry_neterror">网络异常，是否重试?</string>
+    <string name="player_exit">退出</string>
+    <string name="retry">重试</string>
+</resources>

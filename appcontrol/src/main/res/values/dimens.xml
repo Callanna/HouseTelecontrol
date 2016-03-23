@@ -1,0 +1,19 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <!--telerunfargmentone-->
+    <dimen name="width_telerunfargment">200dp</dimen>
+    <dimen name="hidth_telerunfargment">200dp</dimen>
+    <dimen name="layout_relative_width">210dp</dimen>
+    <dimen name="layout_relative_hidth">210dp</dimen>
+    <dimen name="layout_imagebutton_width">106dp</dimen>
+    <dimen name="layout_imagebutton_hidth">106dp</dimen>
+    <dimen name="layout_imagebutton_widthl">105dp</dimen>
+    <dimen name="layout_imagebutton_hidthl">105dp</dimen>
+    <dimen name="imagebuton_width">85dp</dimen>
+    <dimen name="imagebuton_hidth">85dp</dimen>
+    <dimen name="layout_marginleft">65dp</dimen>
+    <dimen name="layout_marginttop">65dp</dimen>
+</resources>

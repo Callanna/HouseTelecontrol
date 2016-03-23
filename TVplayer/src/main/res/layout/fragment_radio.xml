@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+     <LinearLayout
+         android:layout_width="match_parent"
+         android:layout_height="0dp"
+         android:layout_weight="1"
+         android:layout_gravity="center"
+         android:gravity="center"
+         >
+         <RelativeLayout
+             android:id="@+id/imv_mic_wave"
+             android:background="@mipmap/mic_1"
+             android:layout_width="420dp"
+             android:layout_height="120dp">
+              <ImageView
+                  android:layout_centerInParent="true"
+                  android:background="@mipmap/radio_wave_center"
+                  android:layout_width="120dp"
+                  android:layout_height="120dp" />
+         </RelativeLayout>
+
+     </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:layout_gravity="center"
+        android:gravity="center"
+        >
+       <RelativeLayout
+           android:background="@mipmap/icon_radio_bg"
+           android:layout_width="800dp"
+           android:layout_height="400dp">
+           <RelativeLayout
+               android:id="@+id/layout_switch"
+               android:background="@mipmap/ic_zhongxin_an"
+               android:layout_marginBottom="20dp"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_alignParentBottom="true"
+               android:layout_centerHorizontal="true">
+               <ImageButton
+                   android:id="@+id/mbtn_switch"
+                   android:layout_centerInParent="true"
+                   android:background="@mipmap/ic_guan"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content" />
+           </RelativeLayout>
+
+       </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

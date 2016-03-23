@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <!--Theme 2 -->
+    <color name="primary">#673AB7</color>
+    <color name="primary_dark">#512DA8</color>
+    <color name="primary_light">#D1C4E9</color>
+    <color name="accent">#4CAF50</color>
+    <color name="primary_text">#212121</color>
+    <color name="secondary_text">#727272</color>
+    <color name="icons">#FFFFFF</color>
+    <color name="divider">#B6B6B6</color>
+
+
+    <color name="safr_ripple">#ffc3c3c3</color>
+    <color name="safr_pressed">#ffd7d7d7</color>
+    <color name="safr_pressed_dark">#ff282828</color>
+    <color name="toast_bg">#EE000000</color>
+
+    <color name="window_background">#00000000</color>
+    <color name="card_background">#ffffff</color>
+    <color name="card_shadow">#10000000</color>
+    <color name="material_red">#F44336</color>
+    <color name="material_green">#4CAF50</color>
+    <color name="material_blue">#5677fc</color>
+</resources>

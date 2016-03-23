@@ -1,0 +1,13 @@
+﻿#BNF+IAT 1.0 UTF-8;
+!grammar cmd;
+!slot <action>;
+!slot <function>;
+!slot <briefunction>;
+!start <callStart>;
+<callStart>:<function>|<action>[<briefunction>];
+<function>:开机|关机|返回|退出|确定|上|下|左|右|静音|打开声音|加声音|减声音|频道加|频道减|启动识别|停止识别;
+<action>:打开|关闭;
+<briefunction>:灯|电源;
+
+ 
+ 

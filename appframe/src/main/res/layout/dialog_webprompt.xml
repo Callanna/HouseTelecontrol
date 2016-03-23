@@ -1,0 +1,14 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="15dp" >
+
+    <EditText
+        android:id="@+id/edt_web_prompt"
+        style="@style/EditTextStyle"
+        android:layout_marginTop="20dp"
+        android:inputType="text" />
+
+</LinearLayout>

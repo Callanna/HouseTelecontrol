@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@color/guillotine_background_dark"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <android.support.v7.widget.Toolbar
+        style="@style/Toolbar"
+         >
+
+        <ImageView
+            android:id="@+id/guillotine_hamburger"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:src="@mipmap/ic_menu" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="遥控器"
+            android:textSize="22sp"
+            />
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout
+        android:id="@+id/activity_television"
+        style="@style/LinearLayout.GuillotineItem"
+        android:layout_marginTop="20dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@mipmap/ic_television" />
+
+        <TextView
+            style="@style/TextView.GuillotineItem"
+            android:text="@string/television" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/activity_air_condition"
+        style="@style/LinearLayout.GuillotineItem">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@mipmap/ic_air_conditioner" />
+
+        <TextView
+            style="@style/TextView.GuillotineItem"
+            android:text="@string/air_condition" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/activity_dvd"
+        style="@style/LinearLayout.GuillotineItem">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@mipmap/ic_dvd" />
+
+        <TextView
+            style="@style/TextView.GuillotineItem"
+            android:text="@string/dvd" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/activity_stb"
+        style="@style/LinearLayout.GuillotineItem">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@mipmap/ic_stb" />
+
+        <TextView
+            style="@style/TextView.GuillotineItem"
+            android:text="@string/stb" />
+    </LinearLayout>
+
+    <View
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:background="@color/guillotine_background"
+        android:layout_height="2dp" />
+
+    <LinearLayout
+        android:id="@+id/settings_group"
+        style="@style/LinearLayout.GuillotineItem">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@mipmap/ic_setting" />
+
+        <TextView
+            style="@style/TextView.GuillotineItem"
+            android:text="@string/settings" />
+    </LinearLayout>
+
+
+
+</LinearLayout>

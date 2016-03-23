@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="MySwitch_BUTTON">
+        <!-- Drawable to use when the switch is in the checked/"on" state. -->
+        <attr name="trackOn" format="reference" />
+        <!-- Drawable to use when the switch is in the unchecked/"off" state. -->
+        <attr name="trackOff" format="reference" />
+    </declare-styleable>
+</resources>

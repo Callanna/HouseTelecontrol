@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<meta http-equiv="content-type" content="text/html;charset=utf-8"/>
+	<meta id="viewport" name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1; user-scalable=no;" />
+	
+	<style type="text/css">
+		.sec_body {background:#EBEBEB;text-shadow:#ddd 0 1px 0px;font-family:Helvetica;line-height:1.5;font-size:small; }
+		.center_father {text-align: center;}
+		.center_son {margin-right:auto;margin-left: auto;}
+		a{font-size:16px;color:#1B7AEA;}
+		/*a:link {color:#1B7AEA; text-decoration:none;} //未访问：蓝色、无下划线 
+		a:active:{color:#1B7AEA; } //激活
+		a:visited {color:#1B7AEA; text-decoration:none;} //已访问：purple、无下划线 
+		a:hover {color:#1B7AEA; text-decoration:underline;} //鼠标移近：红色、下划线 */
+	</style>
+	
+	<title>未连接到互联网</title>
+	
+</head>
+<body class="sec_body">
+	<div class="center_father">
+		<img alt="…" class="center" src="file:///android_asset/web/img/web_wifi_error.png">
+		<h1 class="center" style="margin:0 0;font-size:x-large;padding:0;">小的真的尽力了，可是网络不给力啊…</h1>
+		<p>网络信号弱、不稳定或安全软件禁止访问网络，您可在网络好时重新打开App加载数据。</p>
+	</div>
+	<div class="center_father">
+		<a class="center_son" onclick="freezer.netError()" id="clickCheckNet">检查网络</a>
+	</div>
+<script type="text/javascript">
+	netCheck = document.getElementById("clickCheckNet");
+	netCheck.onclick = function() {
+		android.netError();
+	};
+</script>
+</body>
+</html>

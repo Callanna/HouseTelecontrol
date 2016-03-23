@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head> 
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+  <title>API</title>
+  <script src="js/jquery.js" type="text/javascript"></script>
+  <script type="text/javascript">
+	$(function(){
+	  $("#btnajax").click(function(){
+        $.ajax({
+             type: "get",
+             async: false,
+			 url: "http://192.168.1.41:8888/api/action/play/1/场景1?callback=?",
+			 dataType: "jsonp",
+             jsonp: "callback",
+             success: function(json){
+                 alert(json2str(json));
+             },
+             error: function(){
+                 alert('fail');
+             }
+         });
+     });
+   });
+   function json2str(json){
+		var arr = [];
+		var fmt = function(s){
+			if(typeof s == 'object' && s != null) return json2str(s);
+			return /^(string|number)$/.test(typeof s) ? "'" + s + "'" : s;
+		}
+		for(var i in json) arr.push("'" + i + "':" + fmt(json[i]));
+		return '{' + arr.join(',') + '}';
+   }
+	function post(url,params){
+		var temp = document.createElement("form");
+		temp.action = url;
+		temp.method = "POST";
+		temp.style.display = "none";
+		for(var x in params){
+			var opt = document.createElement("textarea");
+			opt.name = x;
+			opt.value = params[x];
+			temp.appendChild(opt);
+		}
+		document.body.appendChild(temp);
+		temp.submit();
+		return temp;
+	}
+  </script>
+  <style type="text/css">
+  	.m_body{
+  		background: rgb(255,255,255);padding: 1px; border-radius: 8px;
+  		overflow: hidden; position: relative; box-shadow: 0px 0px 7px rgba(218,218,218,0.5);
+  	}
+  	.m_content{
+	  	padding: 20px 20px 30px;width: 97%;//709px;
+	  	overflow: hidden; float: left;
+  	}
+  	.m_content p{
+	  	margin-left: 15px;
+	  	font-size: 12px;
+  	}
+  	.m_firstHeading{
+	  	color: rgb(0,0,0); padding-bottom: 15px;
+	  	font-family: "Microsoft Yahei"; font-size: 20px;
+	  	border-bottom-color: rgb(229,229,229);
+	  	border-bottom-width: 1px; border-bottom-style: solid;
+  	}
+  	.content-ltr{
+	  	padding: 0px 10px;
+  	}
+  	.m_title{
+	  	background: rgb(237,243,249);
+	  	margin: 16px 0px 8px; padding: 0px 0px 0px 15px;
+	  	line-height: 25px; font-size: 14px;
+	  	font-weight: bold;
+  	}
+  	pre{
+	  	margin-left: 15px; width: 97%;
+	  	background: white; padding: 1em 0px; border: 1pt dashed black;
+	  	color: black; overflow: hidden; font-size: 8pt; white-space: pre;
+	  	line-height: 1.1em; background: rgb(249,249,249);
+  	}
+  	.m_table{
+	  	font-size: 10pt;border-top-color: rgb(204,204,204); 
+	  	border-right-color: rgb(204,204,204);
+	  	border-bottom-color: rgb(204,204,204);
+	  	border-left-color: rgb(204,204,204);margin-left: 15px;
+	  	border-collapse: collapse;
+	  	width: 97%;
+  	}
+  </style>
+ </head> 
+ <body>
+ 	<div class="m_body">
+ 		<div class="m_content">
+ 			<h1 class="m_firstHeading">TVControl OpenAPI技术文档</h1><p>1.1 beta</p>
+ 			<div class="content-ltr">
+
+				<h2 class="m_title">配对</h2>
+				<p>配对IP</p>
+				<table class="m_table" border="1" cellspacing="0" cellpadding="0">
+					<tr>
+						<td width="10%">URL</td><td>api/tvserver/findDevice</td>
+					</tr>
+					<tr>
+						<td>参数说明</td><td></td>
+					</tr>
+					<tr>
+						<td>HTTP请求方式</td><td>GET</td>
+					</tr>
+					<tr>
+						<td>示例</td><td><a href="api/tvserver/findDevice">api/tvserver/findDevice</a></td>
+					</tr>
+				</table>
+
+				<h2 class="m_title">获取主机状态信息</h2>
+				<p>获取主机状态信息</p>
+				<table class="m_table" border="1" cellspacing="0" cellpadding="0">
+					<tr>
+						<td width="10%">URL</td><td>api/tvserver/getState</td>
+					</tr>
+					<tr>
+						<td>参数说明</td><td></td>
+					</tr>
+					<tr>
+						<td>HTTP请求方式</td><td>GET</td>
+					</tr>
+					<tr>
+						<td>示例</td><td><a href="api/tvserver/getState">api/tvserver/getState</a></td>
+					</tr>
+				</table>
+        <h2 class="m_title">电源开</h2>
+        <p>打开电视机</p>
+        <table class="m_table" border="1" cellspacing="0" cellpadding="0">
+          <tr>
+            <td width="10%">URL</td><td>api/tvserver/switch/on</td>
+          </tr>
+          <tr>
+            <td>参数说明</td><td></td>
+          </tr>
+          <tr>
+            <td>HTTP请求方式</td><td>GET</td>
+          </tr>
+          <tr>
+            <td>示例</td><td><a href="api/tvserver/switch/on">api/tvserver/switch/on</a></td>
+          </tr>
+        </table>
+				<h2 class="m_title">电源关</h2>
+				<p>关闭电视机</p>
+				<table class="m_table" border="1" cellspacing="0" cellpadding="0">
+					<tr>
+						<td width="10%">URL</td><td>api/tvserver/switch/off</td>
+					</tr>
+					<tr>
+						<td>参数说明</td><td></td>
+					</tr>
+					<tr>
+						<td>HTTP请求方式</td><td>GET</td>
+					</tr>
+					<tr>
+						<td>示例</td><td><a href="api/tvserver/switch/off">api/tvserver/switch/off</a></td>
+					</tr>
+				</table>
+
+				<h2 class="m_title">静音</h2>
+				<p>静音</p>
+				<table class="m_table" border="1" cellspacing="0" cellpadding="0">
+					<tr>
+						<td width="10%">URL</td><td>api/tvserver/silence</td>
+					</tr>
+					<tr>
+						<td>参数说明</td><td></td>
+					</tr>
+					<tr>
+						<td>HTTP请求方式</td><td>GET</td>
+					</tr>
+					<tr>
+						<td>示例</td><td><a href="api/tvserver/silence">api/tvserver/silence</a></td>
+					</tr>
+				</table>
+
+				<h2 class="m_title">打开声音</h2>
+				<p>开音</p>
+				<table class="m_table" border="1" cellspacing="0" cellpadding="0">
+					<tr>
+						<td width="10%">URL</td><td>api/tvserver/ring</td>
+					</tr>
+					<tr>
+						<td>参数说明</td><td></td>
+					</tr>
+					<tr>
+						<td>HTTP请求方式</td><td>GET</td>
+					</tr>
+					<tr>
+						<td>示例</td><td><a href="api/tvserver/ring">api/tvserver/ring</a></td>
+					</tr>
+				</table>
+
+				<h2 class="m_title">音量减</h2>
+				<p>音量减</p>
+				<table class="m_table" border="1" cellspacing="0" cellpadding="0">
+					<tr>
+						<td width="10%">URL</td><td>api/tvserver/sound/down</td>
+					</tr>
+					<tr>
+						<td>参数说明</td><td></td>
+					</tr>
+					<tr>
+						<td>HTTP请求方式</td><td>GET</td>
+					</tr>
+					<tr>
+						<td>示例</td><td><a href="api/tvserver/sound/down">api/tvserver/sound/down</a></td>
+					</tr>
+				</table>
+
+				<h2 class="m_title">音量加</h2>
+				<p>音量加</p>
+				<table class="m_table" border="1" cellspacing="0" cellpadding="0">
+					<tr>
+						<td width="10%">URL</td><td>api/tvserver/sound/add</td>
+					</tr>
+					<tr>
+						<td>参数说明</td><td></td>
+					</tr>
+					<tr>
+						<td>HTTP请求方式</td><td>GET</td>
+					</tr>
+					<tr>
+						<td>示例</td><td><a href="api/tvserver/sound/add">api/tvserver/sound/add</a></td>
+					</tr>
+				</table>
+
+
+				<h2 class="m_title">上一个节目</h2>
+				<p>上一个节目</p>
+				<table class="m_table" border="1" cellspacing="0" cellpadding="0">
+					<tr>
+						<td width="10%">URL</td><td>api/tvserver/program/pre</td>
+					</tr>
+					<tr>
+						<td>参数说明</td><td></td>
+					</tr>
+					<tr>
+						<td>HTTP请求方式</td><td>GET</td>
+					</tr>
+					<tr>
+						<td>示例</td><td><a href="api/tvserver/program/pre">api/tvserver/program/pre</a></td>
+					</tr>
+				</table>
+
+
+
+				<h2 class="m_title">下一个节目</h2>
+				<p>下一个节目</p>
+				<table class="m_table" border="1" cellspacing="0" cellpadding="0">
+					<tr>
+						<td width="10%">URL</td><td>api/tvserver/program/next</td>
+					</tr>
+					<tr>
+						<td>参数说明</td><td></td>
+					</tr>
+					<tr>
+						<td>HTTP请求方式</td><td>GET</td>
+					</tr>
+					<tr>
+						<td>示例</td><td><a href="api/tvserver/program/next">api/tvserver/program/next</a></td>
+					</tr>
+				</table>
+				<h2 class="m_title">菜单</h2>
+				<p>菜单显示与隐藏</p>
+				<table class="m_table" border="1" cellspacing="0" cellpadding="0">
+					<tr>
+						<td width="10%">URL</td><td>api/tvserver/menu</td>
+					</tr>
+					<tr>
+						<td>参数说明</td><td></td>
+					</tr>
+					<tr>
+						<td>HTTP请求方式</td><td>GET</td>
+					</tr>
+					<tr>
+						<td>示例</td><td><a href="api/tvserver/menu">api/tvserver/menu</a></td>
+					</tr>
+				</table>
+
+				<h2 class="m_title">返回</h2>
+				<p>返回</p>
+				<table class="m_table" border="1" cellspacing="0" cellpadding="0">
+					<tr>
+						<td width="10%">URL</td><td>api/tvserver/back</td>
+					</tr>
+					<tr>
+						<td>参数说明</td><td></td>
+					</tr>
+					<tr>
+						<td>HTTP请求方式</td><td>GET</td>
+					</tr>
+					<tr>
+						<td>示例</td><td><a href="api/tvserver/back">api/tvserver/back</a></td>
+					</tr>
+				</table>
+				<h2 class="m_title"> 上 </h2>
+				<p>key上键</p>
+				<table class="m_table" border="1" cellspacing="0" cellpadding="0">
+					<tr>
+						<td width="10%">URL</td><td>api/tvserver/top</td>
+					</tr>
+					<tr>
+						<td>参数说明</td><td></td>
+					</tr>
+					<tr>
+						<td>HTTP请求方式</td><td>GET</td>
+					</tr>
+					<tr>
+						<td>示例</td><td><a href="api/tvserver/top">api/tvserver/top</a></td>
+					</tr>
+				</table>
+				<h2 class="m_title"> 左 </h2>
+				<p>key左键</p>
+				<table class="m_table" border="1" cellspacing="0" cellpadding="0">
+					<tr>
+						<td width="10%">URL</td><td>api/tvserver/left</td>
+					</tr>
+					<tr>
+						<td>参数说明</td><td></td>
+					</tr>
+					<tr>
+						<td>HTTP请求方式</td><td>GET</td>
+					</tr>
+					<tr>
+						<td>示例</td><td><a href="api/tvserver/left">api/tvserver/left</a></td>
+					</tr>
+				</table>
+				<h2 class="m_title"> 右 </h2>
+				<p>key右键</p>
+				<table class="m_table" border="1" cellspacing="0" cellpadding="0">
+					<tr>
+						<td width="10%">URL</td><td>api/tvserver/right</td>
+					</tr>
+					<tr>
+						<td>参数说明</td><td></td>
+					</tr>
+					<tr>
+						<td>HTTP请求方式</td><td>GET</td>
+					</tr>
+					<tr>
+						<td>示例</td><td><a href="api/tvserver/right">api/tvserver/right</a></td>
+					</tr>
+				</table>
+				<h2 class="m_title"> 下 </h2>
+				<p>key下键</p>
+				<table class="m_table" border="1" cellspacing="0" cellpadding="0">
+					<tr>
+						<td width="10%">URL</td><td>api/tvserver/bottom</td>
+					</tr>
+					<tr>
+						<td>参数说明</td><td></td>
+					</tr>
+					<tr>
+						<td>HTTP请求方式</td><td>GET</td>
+					</tr>
+					<tr>
+						<td>示例</td><td><a href="api/tvserver/bottom">api/tvserver/bottom</a></td>
+					</tr>
+				</table>
+				<h2 class="m_title"> OK </h2>
+				<p>key确定键</p>
+				<table class="m_table" border="1" cellspacing="0" cellpadding="0">
+					<tr>
+						<td width="10%">URL</td><td>api/tvserver/OK</td>
+					</tr>
+					<tr>
+						<td>参数说明</td><td></td>
+					</tr>
+					<tr>
+						<td>HTTP请求方式</td><td>GET</td>
+					</tr>
+					<tr>
+						<td>示例</td><td><a href="api/tvserver/OK">api/tvserver/OK</a></td>
+					</tr>
+				</table>
+			</div>
+ 		</div>
+ 	</div>
+<input id="btnajax" style="display: none;" value="发送请求" type="button" />
+ </body>
+</html>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="@mipmap/music_record_lyric_mask"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/nolrctextview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical|center_horizontal"
+        android:text="没有歌词"
+        android:textSize="20dp"
+        android:textColor="@android:color/white" />
+
+    <com.github.callanna.housetelecontrol.view.LRC.LyricView
+        android:background="@color/transparent_part"
+        android:id="@+id/lrcview2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal|center_vertical" >
+    </com.github.callanna.housetelecontrol.view.LRC.LyricView>
+
+</FrameLayout>
